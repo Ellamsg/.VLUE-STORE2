@@ -4,11 +4,10 @@ import CartItem from "../components/CartItem"
 
 
 function Cart(item) {
-    const {cartItems,tot} = useContext(Context)
+    const {cartItems} = useContext(Context)
     const [quantity ,setquantity] =React.useState(1)
-    let costotal = 5.99 * cartItems.length
-    
-    
+    const costotal = cartItems.reduce((total, item) => total + item.price, 0);
+   
     const cartItemElements = cartItems.map(item => (
      <div>
       
@@ -34,7 +33,7 @@ function Cart(item) {
                 </div>
                 <div className="flex py-3  crt">
                 <p className="total-cost ">SubTotal</p>
-                <p className="font-bold">$  {costotal }</p>
+                <p className="font-bold">$  {costotal * cartItems.length }</p>
                 </div>
             
             <div className="order-button">

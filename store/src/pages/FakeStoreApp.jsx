@@ -107,7 +107,7 @@ const FakeStoreApp = ({item  }) => {
             <div className="py-3">
 
               <p className="text-black">{item.title}</p>
-              <p className="text-gray font-medium uppercase">$5.99</p>
+              <p className="text-gray font-medium uppercase">${item.price}</p>
               <button onClick={() => handleClick(item)} className=" cart bg-wind  text-xs lg:top-0 absolute rounded-[2px] 
                 text-white px-4 py-2 "
                 >ADD TO CART</button>

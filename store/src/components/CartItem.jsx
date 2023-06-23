@@ -11,8 +11,8 @@ function CartItem({item}) {
     return (
         <div className="flex justify-evenly  lg:flex-row flex-col   py-3 border-boxwind2 border-b-2  ">
              <div className="flex flex-col items-center lg:items-start  lg:flex-row justify-center ">
-             <p className="pt-5   px-4 " onClick={()=>removeFromCart(item.id)}>x</p>
-             <img className="h-[100px] w-[100px]" src={item.image}/>
+             <button className="pt-5 cursor-pointer  px-4 " onClick={()=>removeFromCart(item.id)}>x</button>
+             <img className="h-[100px]  w-[100px]" src={item.image}/>
              </div>
              <div className="lg:mr-[80px] lg:text-start text-center pt-4">
                 <p>$5.99</p>

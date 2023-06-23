@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../Context"
 import { useContext } from "react"
 
+
 import {BsCart2} from  'react-icons/bs'
 
 export default function Header() {
@@ -11,10 +12,11 @@ export default function Header() {
     const {cartItems} = useContext(Context)
     const NumberOfCarts = cartItems.length
     const CartNumber =NumberOfCarts
+
   let Links = [
     { name: "Home", link: "/" },
-    { name: "store", link: "/Product/:id" },
-    { name: "Desc", link: "/Desc" },
+    { name: "Store", link: "/" },
+    { name: "Contact", link: "/" },
    
     
    
@@ -31,9 +33,9 @@ export default function Header() {
 
           <div
             onClick={() => setOpen(!open)}
-            className=" absolute right-2 top-5 z-10 cursor-pointer md:hidden"
+            className=" absolute  right-2 top-[28px] z-10 cursor-pointer md:hidden"
           >
-            <div className="w-4 mr-2  "
+            <div className="w-4  mr-2  "
               name={open ? "close" : "menu"}
              
             >
@@ -70,7 +72,7 @@ export default function Header() {
                 
               ))}
             </div>
-            <Link to="Cart ">
+            <Link to="Cart">
               <div className=" pl-3  flex">
               <BsCart2 className="text-3xl"/>
               <div className="pt-[6px]">

@@ -66,7 +66,7 @@ function Image({ className, img }) {
           />
           <div className="py-3">
             <p className="text-black">{img.title}</p>
-            <p className="text-gray font-medium uppercase">$5.99</p>
+            <p className="text-gray font-medium uppercase">${img.price}</p>
             
           </div>
 
