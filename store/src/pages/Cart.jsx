@@ -14,7 +14,6 @@ function Cart(item) {
     function placeOrder() {
         setButtonText("Ordering...")
         setTimeout(() => {
-            console.log("Order placed!")
             setButtonText("Place Order")
             emptyCart()
         }, 3000)
@@ -52,7 +51,11 @@ function Cart(item) {
                 </div>
             
             <div className="order-button">
-                <button onClick={placeOrder} className="bg-wind text-white px-4 py-2" >{buttonText}</button>
+                { cartItems.length > 0 ?   <button onClick={placeOrder} className="bg-wind text-white px-4 py-2" >{buttonText}</button>
+                 :<p className="">You have no item in cart</p>
+
+                }
+            
                
            
            
