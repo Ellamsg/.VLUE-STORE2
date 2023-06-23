@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.no-bg{
+
+  @apply h-[400px] lg:h-[900px];
+}
+
+.discover{
+
+  @apply lg:text-6xl text-2xl;
+}
+.crt{
+
+  @apply border-boxwind2 border-b-2  justify-between;
+}
+.lines{
+
+  @apply 
+  text-black text-center py-5 border-boxwind border-b-2;
+}
+
+.dsh{
+
+  @apply 
+  h-2 border-black border-t-2 ;
+}
+
+
+
+
+
+
+
+
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: white;
+  background-color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
