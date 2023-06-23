@@ -1,13 +1,28 @@
 import React, {useContext} from "react"
 import {Context} from "../Context"
 import CartItem from "../components/CartItem"
-
+import { useState } from "react"
 
 function Cart(item) {
     const {cartItems} = useContext(Context)
+    const {emptyCart} = useContext(Context)
     const [quantity ,setquantity] =React.useState(1)
+
+    const [buttonText, setButtonText] = useState("Place Order")
+
+
+    function placeOrder() {
+        setButtonText("Ordering...")
+        setTimeout(() => {
+            console.log("Order placed!")
+            setButtonText("Place Order")
+            emptyCart()
+        }, 3000)
+    }
+
+
     const costotal = cartItems.reduce((total, item) => total + item.price, 0);
-   
+
     const cartItemElements = cartItems.map(item => (
      <div>
       
@@ -29,7 +44,7 @@ function Cart(item) {
                 <p className="text-2xl crt">cart total</p>
                 <div className="flex py-3 crt">
                 <p className="total-cost">Total</p>
-                <p> $ {costotal }</p>
+                <p> $  {costotal * cartItems.length }</p>
                 </div>
                 <div className="flex py-3  crt">
                 <p className="total-cost ">SubTotal</p>
@@ -37,7 +52,7 @@ function Cart(item) {
                 </div>
             
             <div className="order-button">
-                <button className="bg-wind text-white px-4 py-2" >Place your Order</button>
+                <button onClick={placeOrder} className="bg-wind text-white px-4 py-2" >{buttonText}</button>
                
            
            
