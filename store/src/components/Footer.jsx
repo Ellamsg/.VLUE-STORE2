@@ -61,15 +61,12 @@ export default function Footer() {
           </p>
           <div className="fixed right-0  bottom-[200px]">
             <Link to="/Cart">
-            <div className=" flex py-4 px-2 text-sm bg-darkwind text-white">
-              <p className="lg:block hidden">Shop</p>
-              <BsCart2 className="text-3xl lg:hidden block" />
-              <div className="pt-[6px] lg:hidden block">{CartNumber}</div>
-
-              
-            </div>
+              <div className=" flex py-4 px-2 text-sm bg-darkwind text-white">
+                <p className="lg:block hidden">Shop</p>
+                <BsCart2 className="text-3xl lg:hidden block" />
+                <div className="pt-[6px] lg:hidden block">{CartNumber}</div>
+              </div>
             </Link>
-           
           </div>
         </div>
       </div>
