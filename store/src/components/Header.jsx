@@ -23,7 +23,7 @@ export default function Header() {
   ];
   let [open, setOpen] = useState(false);
   return (
-    <div className=" bg-oceanblue z-30 sticky bg-white lg:py-0   top-0 ">
+    <div className=" bg-oceanblue z-10 sticky bg-white lg:py-0   top-0 ">
         <p className="bg-wind text-center p-[3px]"> 50% discount on all products</p>
       <div className=" sticky md:px-6  top-0 left-0 md:p-0  lg:text-xl  text-[16px]">
         <div className="md:flex items-center py-3  md:py-4 justify-between lg:gap-6  ">
@@ -54,10 +54,10 @@ export default function Header() {
           </div>
 
           <ul
-            className={`md:flex md:items-center md:bg-transparent text-sm  bg-oceanblue w-full justify-end  text-black
+            className={`md:flex md:items-center px-4 md:px-0 py-4 md:py-0  bg-white md:bg-transparent text-sm  bg-oceanblue w-full justify-end  text-black
          absolute md:static md:z-auto  
         left-0   transition-all duration-500 
-        ease-in ${open ? "top-0 " : "top-[-490px]"}`}
+        ease-in ${open ? "top-7" : "top-[-490px]"}`}
           >
             <div className="md:flex md:items-center  font-name">
               {Links.map((link) => (
@@ -73,9 +73,9 @@ export default function Header() {
               ))}
             </div>
             <Link to="Cart">
-              <div className=" pl-3  flex">
+              <div className=" pl-3 justify-center md:py-0 py-[5px] border-boxwind border-2 md:border-0  flex">
               <BsCart2 className="text-3xl"/>
-              <div className="pt-[6px]">
+              <div className="pt-[6px] ">
               {CartNumber}
               </div>
               </div>

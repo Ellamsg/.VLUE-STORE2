@@ -87,7 +87,7 @@ const FakeStoreApp = ({item  }) => {
 
   return (
     <div className=''>
-   <div className='flex justify-center md:top-7  md:pr-[90px] lg:pr-0 pr-0 lg:mx-[50%]  mx-[57%] md:mx-[0%]   top-[57px] lg:top-7 right-0 left-0 items-center   z-50 fixed '>
+   <div className='flex justify-center md:top-7  md:pr-[140px] lg:pr-0 pr-0 lg:mx-[50%]  mx-[57%] md:mx-[0%]   top-[57px] lg:top-7 right-0 left-0 items-center   z-20 fixed '>
       <input className=' text-black lg:px-7 md:px-7  px-[3px] bg-transparent rounded-[20px] border-boxwind border-2'
         type="text"
         placeholder="Search items..."
