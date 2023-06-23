@@ -29,7 +29,7 @@ export default function Landing(){
             <img className=" no-bg " src="pics/girl.png"/>
             <div className="lg:pt-[289px] pt-[160px] font-extrabold">
               <div className="leading-tight discover">
-              <p className="text-black  ">SEE WHTS'S NEXT </p>
+              <p className="text-black  ">SEE WHATS'S NEXT </p>
                 <p className=" text-black"> HOT NEXT SESON</p>
               </div>
            
@@ -59,7 +59,7 @@ export default function Landing(){
           <img className=" no-bg " src="pics/girl2.png"/>
           <div className="lg:pt-[289px]  pt-[160px] font-extrabold">
             <div className="leading-tight discover">
-            <p className="text-black  uppercase">Casul black</p>
+            <p className="text-black  uppercase">Casual black</p>
               <p className=" text-black uppercase">is the new black</p>
             </div>
         
