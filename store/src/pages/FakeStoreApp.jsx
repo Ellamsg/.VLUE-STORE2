@@ -5,6 +5,8 @@ import axios from 'axios';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from 'react-router-dom';
+import Storedetails from './Storedetails';
 
 const FakeStoreApp = ({item  }) => {
 
@@ -49,7 +51,6 @@ const FakeStoreApp = ({item  }) => {
     ],
   };
   const { toggleFavorite, addToCart, cartItems, removeFromCart } = useContext(Context)
-  const [hovered, setHovered] = useState(false)
   const [items, setItems] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredItems, setFilteredItems] = useState([]);
@@ -102,7 +103,8 @@ const FakeStoreApp = ({item  }) => {
 
     <Slider  {...settings} className='mt-4 lg:m-5 relative py-6'>
         {filteredItems.map((item) => (
-          <div className=" px-3 pb-4 ">
+          <div key={item.id} className=" px-3 pb-4 ">
+            <Link to={`/Storedetails/${item.id}`}>
             <img src={item.image} alt={item.title} className="px-2 w-full o  lg:hover:scale-105 transition-all object-scale-down h-[450px] lg:h-[450px] bg-white" />
             <div className="py-3">
 
@@ -113,6 +115,7 @@ const FakeStoreApp = ({item  }) => {
                 >ADD TO CART</button>
                
             </div>
+            </Link>
           </div>
 
         ))}
