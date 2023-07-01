@@ -62,7 +62,7 @@ function Image({ className, img }) {
         <div className="mr-3 ml-3 relative  ">
           <img
             src={img.image}
-            className=" w-full  bg-fill lg:hover:scale-105  transition-all h-[450px] lg:h-[450px] "
+            className="px-2 w-full o  lg:hover:scale-105 transition-all object-scale-down h-[450px] lg:h-[450px] bg-white "
           />
           <div className="py-3">
             <p className="text-black">{img.title}</p>

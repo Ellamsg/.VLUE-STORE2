@@ -103,7 +103,7 @@ const FakeStoreApp = ({item  }) => {
     <Slider  {...settings} className='mt-4 lg:m-5 relative py-6'>
         {filteredItems.map((item) => (
           <div className=" px-3 pb-4 ">
-            <img src={item.image} alt={item.title} className="px-2 w-full  lg:hover:scale-105 transition-all object-fill h-[450px] lg:h-[450px] bg-white" />
+            <img src={item.image} alt={item.title} className="px-2 w-full o  lg:hover:scale-105 transition-all object-scale-down h-[450px] lg:h-[450px] bg-white" />
             <div className="py-3">
 
               <p className="text-black">{item.title}</p>
