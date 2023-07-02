@@ -21,18 +21,18 @@ export default function Storedetails() {
   return (
     <div className="footer text-black py-5   bg-white">
       {Items ? (
-        <div className="flex flex-col px-3 items-center lg:flex-row">
+        <div className="flex flex-col justify-center lg:gap-[99px] px-3 items-center lg:flex-row">
           <div className="bg-red">
-          <img className="h-[200px]" src={Items.image} />
+          <img className="h-[200px] lg:h-[280px] " src={Items.image} />
             </div>
-            <div>
+            <div className=" lg:w-[50%] ">
             <p className="text-4xl font-semibold py-4">{Items.title}</p>
-          <p className="text-3xl font-medium uppercase">${Items.price}</p>
+          <p className="text-2xl font-medium uppercase">${Items.price}</p>
           <p className="py-4">{Items.description}</p>
           <p><span className="font-semibold">category:</span> {Items.category}</p>
           <button
             onClick={() => handleClick(Items)}
-            className=" cart bg-wind my-4  text-xs l rounded-[2px] 
+            className=" cart bg-wind my-4 lg:my-6 text-xs l rounded-[2px] 
                 text-white px-6 py-2 "
           >
             ADD TO CART
