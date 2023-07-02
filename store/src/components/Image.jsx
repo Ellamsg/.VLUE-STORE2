@@ -60,6 +60,7 @@ function Image({ className, img }) {
         onMouseLeave={() => setHovered(false)}
       >
         <div className="mr-3 ml-3 relative  ">
+        <Link to={`/Storedetails/${img.id}`}>
           <img
             src={img.image}
             className="px-2 w-full o  lg:hover:scale-105 transition-all object-scale-down h-[450px] lg:h-[450px] bg-white "
@@ -71,6 +72,7 @@ function Image({ className, img }) {
           </div>
 
           <div className="absolute top-2 lg:top-0">{cartIcon()}</div>
+          </Link>
         </div>
       </div>
     </div>
