@@ -15,7 +15,9 @@ function CartItem({ item }) {
         >
           x
         </button>
+        <Link to={`/Storedetails/${item.id}`}>
         <img className="h-[100px]  w-[100px]" src={item.image} />
+        </Link>
       </div>
       <div className="lg:mr-[80px] lg:text-start text-center pt-4">
         <p>$5.99</p>

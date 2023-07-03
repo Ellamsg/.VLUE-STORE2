@@ -19,7 +19,7 @@ export default function Footer() {
           <p>Instagram</p>
         </div>
         <div>
-          <p>Likedin</p>
+          <p>Linkedin</p>
         </div>
         <div>
           <p>Gmail</p>

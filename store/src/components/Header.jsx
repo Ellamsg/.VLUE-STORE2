@@ -61,7 +61,7 @@ export default function Header() {
           >
             <div className="md:flex md:items-center  font-name">
               {Links.map((link) => (
-                <div className="">
+                <div className="uppercase">
                   <li className=" px-2 lg:py-0 py-3 ">
                     <Link to={link.link} className="  duration-500">
                       {link.name}
