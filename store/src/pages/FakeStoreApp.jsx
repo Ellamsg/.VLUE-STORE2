@@ -113,6 +113,7 @@ const FakeStoreApp = ({ item }) => {
                 className="px-2 w-full o 
              lg:hover:scale-105 transition-all object-scale-down h-[450px] lg:h-[450px] bg-white"
               />
+               </Link>
               <div className="py-3">
                 <p className="text-black">{item.title}</p>
                 <p className="text-gray font-medium uppercase">${item.price}</p>
@@ -124,7 +125,7 @@ const FakeStoreApp = ({ item }) => {
                   ADD TO CART
                 </button>
               </div>
-            </Link>
+           
           </div>
         ))}
       </Slider>
