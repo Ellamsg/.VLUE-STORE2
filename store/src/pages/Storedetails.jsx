@@ -27,7 +27,7 @@ export default function Storedetails() {
             </div>
             <div className=" lg:w-[50%] ">
             <p className="lg:text-4xl text-3xl  font-semibold py-4">{Items.title}</p>
-          <p className="text-2xl font-medium uppercase">${Items.price}</p>
+          <p className="lg:text-2xl text-base font-medium uppercase">${Items.price}</p>
           <p className="py-4 text-sm lg:text-base">{Items.description}</p>
           <p><span className="font-semibold">category:</span> {Items.category}</p>
           <button
