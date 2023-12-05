@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const Context = React.createContext();
 
-function ContextProvider({ children, serviceId }) {
+function ContextProvider({ children }) {
   const [allPhotos, setAllPhotos] = useState([]);
   const [cartItems, setCartItems] = useState([]);
 
@@ -12,6 +12,9 @@ function ContextProvider({ children, serviceId }) {
       .then((res) => res.json())
       .then((data) => setAllPhotos(data));
   }, []);
+  
+    
+
   function toggleFavorite(id) {
     const updatedArr = allPhotos.map((photo) => {
       if (photo.id === id) {
@@ -25,14 +28,21 @@ function ContextProvider({ children, serviceId }) {
     });
     setAllPhotos(updatedArr);
   }
+
+
+  
   function addToCart(newItem) {
     setCartItems((prevItems) => [...prevItems, newItem]);
   }
+
   console.log(cartItems);
+
 
   function removeFromCart(id) {
     setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
   }
+
+  
 
   function emptyCart() {
     setCartItems([]);

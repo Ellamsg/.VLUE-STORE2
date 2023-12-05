@@ -4,10 +4,7 @@ import CartItem from "../components/CartItem";
 import { useState } from "react";
 
 function Cart(item) {
-  const { cartItems } = useContext(Context);
-  const { emptyCart } = useContext(Context);
-  const [quantity, setquantity] = React.useState(1);
-
+  const { cartItems ,emptyCart} = useContext(Context);
   const [buttonText, setButtonText] = useState("Place Order");
 
   function placeOrder() {

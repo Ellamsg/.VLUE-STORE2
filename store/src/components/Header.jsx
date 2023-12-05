@@ -11,7 +11,7 @@ export default function Header() {
 
     const {cartItems} = useContext(Context)
     const NumberOfCarts = cartItems.length
-    const CartNumber =NumberOfCarts
+    const CartNumber = NumberOfCarts
 
   let Links = [
     { name: "Home", link: "/" },

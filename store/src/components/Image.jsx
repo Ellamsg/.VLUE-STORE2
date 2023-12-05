@@ -8,27 +8,8 @@ function Image({ className, img }) {
   const { toggleFavorite, addToCart, cartItems, removeFromCart } =
     useContext(Context);
 
-  function heartIcon() {
-    if (img.isFavorite) {
-      return (
-        <i
-          className="ri-heart-fill favorite"
-          onClick={() => toggleFavorite(img.id)}
-        >
-          CLICK
-        </i>
-      );
-    } else if (hovered) {
-      return (
-        <i
-          className="ri-heart-line favorite"
-          onClick={() => toggleFavorite(img.id)}
-        >
-          ME PLS
-        </i>
-      );
-    }
-  }
+ 
+
   function cartIcon() {
     const alreadyInCart = cartItems.some((item) => item.id === img.id);
     if (alreadyInCart) {

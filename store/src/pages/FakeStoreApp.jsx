@@ -49,6 +49,8 @@ const FakeStoreApp = ({ item }) => {
       },
     ],
   };
+
+
   const { toggleFavorite, addToCart, cartItems, removeFromCart } =
     useContext(Context);
   const [hovered, setHovered] = useState(false);
@@ -59,6 +61,7 @@ const FakeStoreApp = ({ item }) => {
   useEffect(() => {
     fetchItems();
   }, []);
+  
 
   const fetchItems = async () => {
     try {
@@ -84,6 +87,7 @@ const FakeStoreApp = ({ item }) => {
     addToCart(item);
   }
 
+  
   return (
     <div className="">
       <div
@@ -91,7 +95,7 @@ const FakeStoreApp = ({ item }) => {
      mx-[57%] md:mx-[0%]   top-[57px] lg:top-7 right-0 left-0 items-center   z-20 fixed "
       >
         <input
-          className=" text-black lg:px-7 md:px-7  px-[3px] bg-transparent rounded-[20px] border-boxwind border-2"
+          className=" text-black lg:px-7 md:px-7  px-[3px] bg-transparent  rounded-[20px] border-boxwind border-2"
           type="text"
           placeholder="Search items..."
           value={searchQuery}
